@@ -1,2 +1,10 @@
-FROM nginx
+# FROM nginx
+# COPY index.html /usr/share/nginx/html/index.html
+
+
+FROM centos
+RUN  yum install epel-release -y
+RUN  yum install nginx -y
 COPY index.html /usr/share/nginx/html/index.html
+EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
