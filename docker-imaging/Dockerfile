@@ -12,6 +12,6 @@
 
 FROM centos:7
 # ENTRYPOINT ["ping","-c3","google.com"]
-ENTRYPOINT ["ping","-c3]
+ENTRYPOINT ["ping","-c3"]
 CMD ["google.com"]
 
