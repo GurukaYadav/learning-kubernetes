@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Anusha
+spec:
+  containers:
+    - name: srinivas
+      image: nginx
+    - name: manjula
+      image: tomcat
