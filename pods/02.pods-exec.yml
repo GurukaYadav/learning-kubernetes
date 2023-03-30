@@ -6,6 +6,10 @@ spec:
   containers:
     - name: avinash
       image: tomcat
+      ports:
+        - containerPort: 80
     - name: arun
       image: centos:7
       command: ["sleep", "10000000"]
+      ports:
+        - containerPort: 80
