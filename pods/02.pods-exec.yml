@@ -16,14 +16,31 @@
 ##     command: ["sleep", "10000000"]
 
 
+#apiVersion: v1
+#kind: Pod
+#metadata:
+#  name: srinivas
+#spec:
+#  containers:
+#    - name: avinash
+#      image: nginx
+#    - name: arun
+#      image: centos:7
+#      command: ["sleep", "10000000"]
+
+#assign resource like cpu and memory with minimum(requests) they are assigned with from the pod and maximum (limit) they can use from pod
 apiVersion: v1
 kind: Pod
 metadata:
   name: srinivas
 spec:
   containers:
-    - name: avinash
-      image: nginx
     - name: arun
       image: centos:7
       command: ["sleep", "10000000"]
+      resources:
+        requests:
+          memory: "2Mi"
+          cpu: "25m"
+
+
