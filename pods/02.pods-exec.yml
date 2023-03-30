@@ -1,3 +1,21 @@
+#apiVersion: v1
+#kind: Pod
+#metadata:
+#  name: srinivas
+#spec:
+#  containers:
+#    - name: avinash
+#      image: nginx
+#    - name: arun
+#      image: tomcat
+#      ports:
+#        - containerPort: 80
+#
+##    - name: arun
+##      image: centos:7
+##     command: ["sleep", "10000000"]
+
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -7,10 +25,5 @@ spec:
     - name: avinash
       image: nginx
     - name: arun
-      image: tomcat
-      ports:
-        - containerPort: 80
-
-#    - name: arun
-#      image: centos:7
-#     command: ["sleep", "10000000"]
+      image: centos:7
+      command: ["sleep", "10000000"]
