@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  - name: srinivas
+spec:
+  containers:
+    - name: avinash
+      image: tomcat
+    - name: arun
+      image: centos:7
