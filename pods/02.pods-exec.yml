@@ -6,7 +6,7 @@ spec:
   containers:
     - name: avinash
       image: nginx
-    - name: avinash
+    - name: arun
       image: tomcat
 #    - name: arun
 #      image: centos:7
