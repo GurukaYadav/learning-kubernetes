@@ -40,5 +40,4 @@ spec:
     spec:
       containers:
         - name: avinash
-          image: centos
-          command: ["sleep", "10000000"]
+          image: nginx

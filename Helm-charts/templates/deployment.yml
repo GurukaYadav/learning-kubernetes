@@ -1,0 +1,22 @@
+#A basic manifest for creating a Kubernetes deployment
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}
+  labels:
+    app: guestbook
+    tier: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: {{ .Values.appName }}
+  template:
+    metadata:
+      labels:
+        tier: {{ .Values.appName }}
+    spec:
+      containers:
+        - name: arun
+          image: nginx
