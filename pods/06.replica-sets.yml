@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
         - name: avinash
-          image: nginx
+          image: nginx-1.17
