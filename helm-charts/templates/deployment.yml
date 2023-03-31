@@ -19,4 +19,4 @@ spec:
     spec:
       containers:
         - name: arun
-          image: {{ .Values.image}}
+          image: {{ .Values.image }}
