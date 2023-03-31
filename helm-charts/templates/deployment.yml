@@ -3,7 +3,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.appName }}
+  name: {{ .Values.appName }}-deploy
   labels:
     app: guestbook
     tier: frontend
@@ -11,11 +11,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      tier: {{ .Values.appName }}
+      tier: {{ .Values.appName }}-deploy
   template:
     metadata:
       labels:
-        tier: {{ .Values.appName }}
+        tier: {{ .Values.appName }}-deploy
     spec:
       containers:
         - name: arun
