@@ -1,28 +1,5 @@
-apiVersion: apps/v1
-kind: ReplicaSet
-metadata:
-  name: frontend-replica
-  labels:
-    app: guestbook
-    tier: frontend
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      tier: frontend-replica
-  template:
-    metadata:
-      labels:
-        tier: frontend-replica
-    spec:
-      containers:
-        - name: avinash
-          image: nginx-1.18
-
-#  Replicaset is not sensible to detect changes(changes in the nginx image version) in the congifuration(yml file) where as Deployment is sensible to detect any changes in the config. So, we always wrap the replicaset with the deployment.
-#
 #apiVersion: apps/v1
-#kind: Deployment
+#kind: ReplicaSet
 #metadata:
 #  name: frontend-replica
 #  labels:
@@ -40,4 +17,27 @@ spec:
 #    spec:
 #      containers:
 #        - name: avinash
-#          image: tomcat
+#          image: nginx-1.18
+
+#  Replicaset is not sensible to detect changes(changes in the nginx image version) in the congifuration(yml file) where as Deployment is sensible to detect any changes in the config. So, we always wrap the replicaset with the deployment.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deploy
+  labels:
+    app: guestbook
+    tier: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend-deploy
+  template:
+    metadata:
+      labels:
+        tier: frontend-deploy
+    spec:
+      containers:
+        - name: avinash
+          image: nginx
