@@ -1,3 +1,4 @@
 #The values.yaml file is also important to templates. This file contains the default values for a chart. These values may be overridden by users during helm install or helm upgrade.
 
 appName: cart
+image: nginx
