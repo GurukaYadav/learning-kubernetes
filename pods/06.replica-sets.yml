@@ -40,4 +40,5 @@ spec:
     spec:
       containers:
         - name: avinash
-          image: tomcat
+          image: centos
+          command: ["sleep", "10000000"]
